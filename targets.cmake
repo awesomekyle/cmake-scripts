@@ -98,6 +98,8 @@ function(setup_compile_options target)
                     /WX
                     /MP
                     /sdl
+                    /wd4221 # C initialized using address of automatic variable; valid in C99
+                    /wd4204 # non-constant initializer; valid in C99
             )
             target_compile_definitions(${target}
                 PRIVATE
